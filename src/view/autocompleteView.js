@@ -67,7 +67,7 @@ export default class extends View {
         const suggestionsComponent = suggestions.map(suggestion =>
             autocompleteTemplate({
                 keyword: suggestion,
-                renderKeyword: suggestion.replace(target, `<b>${term}</b>`)
+                renderKeyword: suggestion.replace(target, (m) => `<b>${m}</b>`)
             })).join('');
         this.suggestionsEl.insertAdjacentHTML('afterbegin', suggestionsComponent);
     }
