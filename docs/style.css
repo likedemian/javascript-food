@@ -527,7 +527,7 @@ a {
     background-position: right -52px; }
 
 .side_food .infinite_food_banner {
-  background-image: url(https://cdn.bmf.kr/banner/main_event/171214/1513243712683_1e0a6312599e.jpg); }
+  background: url(https://cdn.bmf.kr/banner/main_event/171214/1513243712683_1e0a6312599e.jpg) no-repeat center; }
   .side_food .infinite_food_banner > a {
     display: block;
     width: 980px;
@@ -535,7 +535,7 @@ a {
     margin: 0 auto; }
 
 .main_food .infinite_food_banner {
-  background-image: url(https://cdn.bmf.kr/banner/main_event/170628/1498639751272_e6cadbda65b4.jpg); }
+  background: url(https://cdn.bmf.kr/banner/main_event/170628/1498639751272_e6cadbda65b4.jpg) no-repeat center; }
   .main_food .infinite_food_banner > a {
     display: block;
     width: 980px;
@@ -543,7 +543,7 @@ a {
     margin: 0 auto; }
 
 .course_food .infinite_food_banner {
-  background-image: url(https://cdn.bmf.kr/banner/main_event/170425/1493082744401_ba9831e4e2bb.png); }
+  background: url(https://cdn.bmf.kr/banner/main_event/170425/1493082744401_ba9831e4e2bb.png) no-repeat center; }
   .course_food .infinite_food_banner > a {
     display: block;
     width: 980px;
@@ -613,3 +613,5 @@ a {
     background-position: 0 -50px; }
     .scroller > .page_down > a:hover, .scroller > .page_down > a:focus {
       background-position: -50px -50px; }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VSb290IjoiIn0=*/

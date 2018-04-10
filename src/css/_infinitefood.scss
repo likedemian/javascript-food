@@ -36,8 +36,6 @@
     }
 }
 
-
-
 .infinite_food_slides_navi {
     >a {
         position: absolute;
@@ -69,7 +67,7 @@
 @each $food,
 $img in (side_food:'https://cdn.bmf.kr/banner/main_event/171214/1513243712683_1e0a6312599e.jpg', main_food:'https://cdn.bmf.kr/banner/main_event/170628/1498639751272_e6cadbda65b4.jpg', course_food:'https://cdn.bmf.kr/banner/main_event/170425/1493082744401_ba9831e4e2bb.png') {
     .#{$food} .infinite_food_banner {
-        background-image: url(#{$img});
+        background: url(#{$img}) no-repeat center;
         >a {
             display: block;
             width: 980px;
