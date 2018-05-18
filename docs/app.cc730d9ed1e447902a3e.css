@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);/* reset styles */
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* reset styles */
 *,
 *:after,
 *:before {
@@ -656,3 +657,4 @@ a {
     background-position: 0 -50px; }
     .scroller > .page_down > a:hover, .scroller > .page_down > a:focus {
       background-position: -50px -50px; }
+
