@@ -18,14 +18,14 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
-        new ExtractTextPlugin('style.css'),
+        new ExtractTextPlugin('style.[hash].css'),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         path: path.resolve(__dirname, 'docs'),
         filename: '[name].[hash].js',
-        publicPath: "./"
+        publicPath: './'
     },
     module: {
         loaders: [{
@@ -37,13 +37,44 @@ module.exports = {
             exclude: /(node_modules)/
         }, {
             test: /\.css$/,
-            use: ['style-loader', 'css-loader']
+            use: [
+                'style-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 1
+                    }
+                },
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: [
+                            require('autoprefixer')
+                        ]
+                    }
+                }
+            ]
         }, {
             test: /\.scss/,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
-                use:  ['css-loader', 'sass-loader']
-              })
+                use: [{
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                require('autoprefixer')
+                            ]
+                        }
+                    },
+                    'sass-loader'
+                ]
+            })
         }, {
             test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: 'url-loader',
