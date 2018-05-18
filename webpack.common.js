@@ -1,5 +1,4 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
@@ -8,7 +7,6 @@ module.exports = {
         app: './src/app.js'
     },
     plugins: [
-        new CleanWebpackPlugin(['docs']),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
@@ -24,8 +22,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'docs'),
-        filename: '[name].[hash].js',
-        publicPath: './'
+        filename: '[name].[hash].js'
     },
     module: {
         loaders: [{
