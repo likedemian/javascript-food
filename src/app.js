@@ -6,7 +6,7 @@ import MainSlideView from './view/MainSlideView';
 import BestBanchanView from './view/BestBanchanView';
 import ScrollerView from './view/ScrollerView';
 import InfiniteSlideView from './view/InfiniteSlideView';
-import AutomCompleteView from './view/AutoCompleteView';
+import AutoCompleteView from './view/AutoCompleteView';
 
 const urlList = {
     mainSlide: 'https://cdn.rawgit.com/sphilee/javascript-food/master/public/mainSlide.json',
@@ -23,13 +23,13 @@ const scrollerView = new ScrollerView('.scroller');
 const sideBanchanView = new InfiniteSlideView('.side_food');
 const mainBanchanView = new InfiniteSlideView('.main_food');
 const courseBanchanView = new InfiniteSlideView('.course_food');
-const automCompleteView = new AutomCompleteView('.searchbar');
+const autoCompleteView = new AutoCompleteView('.searchbar');
 
 
 /**
  * @type {Controller}
  */
-const controller = new Controller(urlList, mainSlideView, bestBanchanView, scrollerView, automCompleteView, sideBanchanView, mainBanchanView, courseBanchanView);
+const controller = new Controller(urlList, mainSlideView, bestBanchanView, scrollerView, autoCompleteView, sideBanchanView, mainBanchanView, courseBanchanView);
 
 const setView = () => controller.setView();
 window.addEventListener('load', setView);
