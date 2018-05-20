@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const autoprefixer = require('autoprefixer');
 
 module.exports = (env, options) => {
     const config = {
@@ -34,14 +33,7 @@ module.exports = (env, options) => {
                             importLoaders: 1
                         }
                     },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer
-                            ]
-                        }
-                    }
+                    'postcss-loader'
                 ]
             }, {
                 test: /\.scss/,
@@ -54,14 +46,7 @@ module.exports = (env, options) => {
                             importLoaders: 1
                         }
                     },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            plugins: [
-                                autoprefixer
-                            ]
-                        }
-                    },
+                    'postcss-loader',
                     'sass-loader'
                 ]
             }, {
